@@ -19,8 +19,9 @@ public class Topic {
     public Topic(int id, String name) {
         this.id = id;
         this.name = name;
-        this.createdAt = LocalDateTime.now();
-        this.updatedAt = LocalDateTime.now();
+        LocalDateTime now = LocalDateTime.now();
+        this.createdAt = now;
+        this.updatedAt = now;
     }
 
     // TODO 3: Getters and Setters (30 XP) ✓
