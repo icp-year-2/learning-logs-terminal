@@ -4,77 +4,50 @@ import java.time.LocalDateTime;
 
 /**
  * ╔══════════════════════════════════════════════════════╗
- * ║           QUEST: Build the Topic Entity              ║
- * ║                                                      ║
- * ║   Complete all TODOs below to earn XP!               ║
- * ║   Total XP available in this file: 90 XP             ║
+ * ║           SOLUTION: Topic Entity                     ║
  * ╚══════════════════════════════════════════════════════╝
- *
- * A Topic represents a subject you are learning about.
- * Each topic has:
- *   - id         (int)            → unique identifier
- *   - name       (String)         → topic name
- *   - createdAt  (LocalDateTime)  → when it was created
- *   - updatedAt  (LocalDateTime)  → when it was last updated
  */
 public class Topic {
 
-    // ============================================================
-    // TODO 1: Declare the fields (+10 XP each = 40 XP)
-    // ============================================================
-    // Declare these private fields:
-    //   - int id
-    //   - String name
-    //   - LocalDateTime createdAt
-    //   - LocalDateTime updatedAt
-    //
-    // Hint: private int id;
-    // ============================================================
+    // TODO 1: Fields (40 XP) ✓
+    private int id;
+    private String name;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
+    // TODO 2: Constructor (20 XP) ✓
+    public Topic(int id, String name) {
+        this.id = id;
+        this.name = name;
+        this.createdAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
+    }
 
+    // TODO 3: Getters and Setters (30 XP) ✓
+    public int getId() {
+        return id;
+    }
 
-    // ============================================================
-    // TODO 2: Create the constructor (+20 XP)
-    // ============================================================
-    // Create a constructor that takes (int id, String name)
-    // Inside the constructor:
-    //   - Set this.id = id
-    //   - Set this.name = name
-    //   - Set this.createdAt = LocalDateTime.now()
-    //   - Set this.updatedAt = LocalDateTime.now()
-    //
-    // Hint: public Topic(int id, String name) { ... }
-    // ============================================================
+    public String getName() {
+        return name;
+    }
 
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
 
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
 
-    // ============================================================
-    // TODO 3: Create getters and setters (+30 XP)
-    // ============================================================
-    // Create these methods:
-    //   - getId()        → returns id
-    //   - getName()      → returns name
-    //   - getCreatedAt() → returns createdAt
-    //   - getUpdatedAt() → returns updatedAt
-    //   - setName(String name) → sets name AND updates updatedAt
-    //
-    // Hint for setName:
-    //   public void setName(String name) {
-    //       this.name = name;
-    //       this.updatedAt = LocalDateTime.now();
-    //   }
-    // ============================================================
+    public void setName(String name) {
+        this.name = name;
+        this.updatedAt = LocalDateTime.now();
+    }
 
-
-
-    // ============================================================
-    // TODO 4: Override toString() (+20 XP — ACHIEVEMENT: Architect!)
-    // ============================================================
-    // Return a readable string like:
-    //   "[1] Java Basics (Created: 2025-02-18T10:30:00)"
-    //
-    // Hint: return "[" + id + "] " + name + " (Created: " + createdAt + ")";
-    // ============================================================
-
-
+    // TODO 4: toString (20 XP) ✓ — ACHIEVEMENT: Architect!
+    @Override
+    public String toString() {
+        return "[" + id + "] " + name + " (Created: " + createdAt + ")";
+    }
 }
