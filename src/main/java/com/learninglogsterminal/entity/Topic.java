@@ -40,10 +40,17 @@ public class Topic {
     // Inside the constructor:
     //   - Set this.id = id
     //   - Set this.name = name
-    //   - Set this.createdAt = LocalDateTime.now()
-    //   - Set this.updatedAt = LocalDateTime.now()
+    //   - Store LocalDateTime.now() in a variable first
+    //   - Set this.createdAt and this.updatedAt to that variable
     //
-    // Hint: public Topic(int id, String name) { ... }
+    // Hint:
+    //   public Topic(int id, String name) {
+    //       this.id = id;
+    //       this.name = name;
+    //       LocalDateTime now = LocalDateTime.now();
+    //       this.createdAt = now;
+    //       this.updatedAt = now;
+    //   }
     // ============================================================
 
 
